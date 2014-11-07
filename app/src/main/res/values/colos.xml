@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_color_primary">@color/palette_light_green_500</color>
+    <color name="app_color_primary_dark">@color/palette_light_green_700</color>
+    <color name="app_color_accent">@color/palette_light_green_A200</color>
+
+    <color name="palette_light_green_A200">#b2ff59</color>
+    <color name="palette_light_green_700">#689f38</color>
+    <color name="palette_light_green_500">#8bc34a</color>
+
+</resources>
