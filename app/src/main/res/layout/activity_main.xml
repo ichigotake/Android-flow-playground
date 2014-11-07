@@ -14,4 +14,17 @@
         app:theme="@style/AppToolbar"
         />
 
+    <net.ichigotake.playground.screenstructure.app.tutorial.TutorialIndicatorView
+        android:layout_below="@+id/activity_main_toolbar"
+        android:id="@+id/activity_main_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <net.ichigotake.playground.screenstructure.flow.ContainerView
+        android:layout_below="@+id/activity_main_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
 </RelativeLayout>
