@@ -21,8 +21,18 @@
         android:layout_height="wrap_content"
         />
 
-    <net.ichigotake.playground.screenstructure.flow.ContainerView
+    <View
         android:layout_below="@+id/activity_main_indicator"
+        android:id="@+id/activity_main_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:alpha="0.3"
+        />
+
+    <net.ichigotake.playground.screenstructure.flow.ContainerView
+        android:layout_below="@+id/activity_main_border"
+        android:id="@+id/screen_switcher_tag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

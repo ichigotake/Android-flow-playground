@@ -4,30 +4,29 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.view.View;
+import android.view.MotionEvent;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import flow.Layout;
+import net.ichigotake.playground.screenstructure.R;
 
-public class ContainerView extends FrameLayout {
+import flow.Flow;
+
+public class ContainerView extends FrameLayout
+		implements HandlesBack, HandlesUp, ScreenSwitcherView {
+
+	private ScreenSwitcher screenSwitcher;
+	private UpAndBackHandler upAndBackHandler;
+	private boolean disabled;
 
 	public ContainerView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-	}
-
-	public void showScreen(Screen screen) {
-		// Get the layout resource ID and inflate it
-		Layout layout = screen.getClass().getAnnotation(Layout.class);
-		View view = LayoutInflater.from(getContext()).inflate(layout.value(), this, false);
-
-		// Notify this screen that we've created the view so it can
-		// bind whatever data it may need to the view.
-		screen.onViewCreated(view);
-
-		// A simple replace.
-		removeAllViews();
-		addView(view);
+		if (isInEditMode()) {
+			return;
+		}
+		upAndBackHandler = new UpAndBackHandler(AppFlow.get(context));
+		screenSwitcher = new SimpleSwitcher.Factory(R.id.screen_switcher_tag, AppFlow.contextFactory())
+				.createScreenSwitcher(this);
 	}
 
 	@Override
@@ -39,4 +38,40 @@ public class ContainerView extends FrameLayout {
 		}
 	}
 
+	@Override
+	public void showScreen(Screen screen, Flow.Direction direction, final Flow.Callback callback) {
+		disabled = true;
+		screenSwitcher.showScreen(screen, direction, new Flow.Callback() {
+			@Override
+			public void onComplete() {
+				callback.onComplete();
+				disabled = false;
+			}
+		});
+	}
+
+	@Override
+	public boolean dispatchTouchEvent(MotionEvent ev) {
+		return !disabled && super.dispatchTouchEvent(ev);
+	}
+
+	@Override
+	public boolean onBackPressed() {
+		return upAndBackHandler.onBackPressed(getCurrentChild());
+	}
+
+	@Override
+	public boolean onUpPressed() {
+		return upAndBackHandler.onUpPressed(getCurrentChild());
+	}
+
+	@Override
+	public ViewGroup getCurrentChild() {
+		return (ViewGroup) getContainerView().getChildAt(0);
+	}
+
+	@Override
+	public ViewGroup getContainerView() {
+		return this;
+	}
 }
