@@ -12,6 +12,9 @@ import net.ichigotake.playground.screenstructure.R;
 
 import flow.Flow;
 
+/**
+ *
+ */
 public class ContainerView extends FrameLayout
 		implements HandlesBack, HandlesUp, ScreenSwitcherView {
 

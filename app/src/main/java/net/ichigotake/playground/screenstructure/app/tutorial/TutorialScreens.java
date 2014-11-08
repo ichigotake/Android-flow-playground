@@ -7,6 +7,12 @@ import net.ichigotake.playground.screenstructure.flow.Screen;
 import flow.HasParent;
 import flow.Layout;
 
+/**
+ *
+ * サンプルを参考に
+ *
+ * https://github.com/square/flow/blob/master/flow-sample/src/main/java/com/example/flow/Screens.java
+ */
 public class TutorialScreens {
 
 	@Layout(R.layout.tutorial_welcome)

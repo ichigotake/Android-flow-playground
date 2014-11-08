@@ -7,6 +7,13 @@ import android.view.LayoutInflater;
 
 import flow.Flow;
 
+/**
+ * square/flow で提供される {@link Flow} のラッパー
+ *
+ * 公式のサンプルからコピペ
+ *
+ * https://github.com/square/flow/blob/master/flow-sample/src/main/java/com/example/flow/appflow/AppFlow.java
+ */
 public class AppFlow {
 
 	private static final String APP_FLOW_SERVICE = "app_flow";

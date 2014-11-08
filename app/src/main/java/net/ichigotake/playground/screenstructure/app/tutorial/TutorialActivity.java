@@ -27,6 +27,7 @@ public class TutorialActivity extends ActionBarActivity implements Flow.Listener
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		appFlow = flowBundler.onCreate(savedInstanceState);
+
 		setContentView(R.layout.activity_main);
 		container = (ContainerView) findViewById(R.id.screen_switcher_tag);
 		Toolbar toolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
@@ -36,6 +37,9 @@ public class TutorialActivity extends ActionBarActivity implements Flow.Listener
 		AppFlow.loadInitialScreen(this);
 	}
 
+	/**
+	 * {@link Flow} によって {@link Screen} が遷移した後にコールバックされる。
+	 */
 	@Override
 	public void go(Backstack nextBackstack, Flow.Direction direction, Flow.Callback callback) {
 		Screen screen = (Screen) nextBackstack.current().getScreen();
@@ -59,7 +63,7 @@ public class TutorialActivity extends ActionBarActivity implements Flow.Listener
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-			return (item.getItemId() == android.R.id.home && container.onUpPressed())
+		return (item.getItemId() == android.R.id.home && container.onUpPressed())
 				|| super.onOptionsItemSelected(item);
 	}
 
@@ -76,6 +80,11 @@ public class TutorialActivity extends ActionBarActivity implements Flow.Listener
 		flowBundler.onSaveInstanceState(outState);
 	}
 
+	/**
+	 * {@link #getSystemService} でActivityの保持する {@link AppFlow} のインスタンスを取得出来るようにする。
+	 * {@link AppFlow#get(android.content.Context)} を利用して、
+	 * アクティビティコンテキストを持つ所ではどこでも画面遷移を実行する事が出来る。
+	 */
 	@Override
 	public Object getSystemService(String name) {
 		if (AppFlow.isAppFlowSystemService(name)) return appFlow;

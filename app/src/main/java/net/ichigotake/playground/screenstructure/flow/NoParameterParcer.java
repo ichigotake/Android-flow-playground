@@ -6,6 +6,19 @@ import android.os.Parcelable;
 
 import flow.Parcer;
 
+/**
+ * {@link Screen} をシリアライズする
+ *
+ * このプロジェクトで利用している {@link Screen} では、コンストラクタに引数を取るものはないため、
+ * クラス名をシリアライズしてリフレクションで {@link Screen} の再生成をしている
+ *
+ * 公式サンプルでは、Gsonを利用してシリアライズしている
+ * https://github.com/square/flow/blob/master/flow-sample/src/main/java/com/example/flow/GsonParcer.java
+ *
+ * 注) `Parcer` はtypoではない https://github.com/square/flow/issues/29
+ *
+ * @param <T> シリアライズされる {@link Screen} のインスタンス
+ */
 public final class NoParameterParcer<T> implements Parcer<T> {
 
 	@Override

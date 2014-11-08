@@ -6,6 +6,13 @@ import flow.Backstack;
 import flow.Flow;
 import flow.Parcer;
 
+/**
+ * ある画面(Activity)のデフォルトスクリーンの設定と生成/復元処理を担う
+ *
+ * 公式のサンプルからコピペ
+ *
+ * https://github.com/square/flow/blob/master/flow-sample/src/main/java/com/example/flow/appflow/FlowBundler.java
+ */
 public class FlowBundler {
 	private static final String FLOW_KEY = "flow_key";
 

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="720.9458333333337" y="145.0">net.ichigotake.playground.screenstructure.app.tutorial.TutorialIndicatorView</node>
+    <node x="408.31697845805024" y="731.1469387755102">net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens</node>
+    <node x="406.78666666666686" y="346.0">net.ichigotake.playground.screenstructure.app.tutorial.TutorialActivity</node>
+    <node x="101.7866666666668" y="850.0">net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description4</node>
+    <node x="101.7866666666668" y="704.0">net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description3</node>
+    <node x="101.7866666666668" y="558.0">net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description2</node>
+    <node x="393.94583333333367" y="112.0">net.ichigotake.playground.screenstructure.flow.ContainerView</node>
+    <node x="84.32083333333355" y="379.0">net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description1</node>
+    <node x="0.0" y="0.0">net.ichigotake.playground.screenstructure.app.tutorial.TutorialPageNumber</node>
+    <node x="202.94583333333358" y="167.0">net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Welcome</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Welcome" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens">
+      <point x="42.75" y="-37.0" />
+      <point x="346.71624149659885" y="512.0857142857142" />
+      <point x="448.65167233560123" y="515.1897959183673" />
+      <point x="-26.200000000000045" y="15.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description3" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialPageNumber">
+      <point x="-63.666666666666686" y="-48.0" />
+      <point x="133.62000000000012" y="679.0" />
+      <point x="38.93333333333328" y="679.0" />
+      <point x="38.93333333333328" y="82.0" />
+      <point x="54.60000000000002" y="82.0" />
+      <point x="-36.39999999999998" y="26.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialActivity" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Welcome">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description4" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialPageNumber">
+      <point x="-63.66666666666663" y="-48.0" />
+      <point x="133.62000000000018" y="825.0" />
+      <point x="12.266666666666652" y="825.0" />
+      <point x="12.266666666666652" y="92.0" />
+      <point x="18.19999999999999" y="92.0" />
+      <point x="-72.80000000000001" y="26.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description1" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialPageNumber">
+      <point x="-63.66666666666663" y="-48.0" />
+      <point x="116.15416666666692" y="321.0" />
+      <point x="98.42861111111125" y="321.0" />
+      <point x="98.42861111111125" y="92.0" />
+      <point x="127.40000000000003" y="92.0" />
+      <point x="36.400000000000034" y="26.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description2" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description1">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description1" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Welcome">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description3" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description2">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description2" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialPageNumber">
+      <point x="-63.66666666666663" y="-48.0" />
+      <point x="133.62000000000018" y="533.0" />
+      <point x="56.836666666666815" y="533.0" />
+      <point x="56.836666666666815" y="92.0" />
+      <point x="91.0" y="92.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Welcome" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialPageNumber">
+      <point x="-42.75" y="-37.0" />
+      <point x="245.69583333333358" y="72.0" />
+      <point x="163.8" y="72.0" />
+      <point x="72.80000000000001" y="26.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description4" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description3">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description1" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens">
+      <point x="0.0" y="-48.0" />
+      <point x="179.82083333333355" y="321.0" />
+      <point x="305.58750000000026" y="322.034693877551" />
+      <point x="305.5875000000002" y="522.7795918367348" />
+      <point x="426.59044784580533" y="524.8489795918368" />
+      <point x="-52.39999999999998" y="15.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialActivity" target="net.ichigotake.playground.screenstructure.flow.ContainerView">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description3" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens">
+      <point x="63.666666666666686" y="-48.0" />
+      <point x="260.9533333333335" y="679.0" />
+      <point x="316.1029761904765" y="682.104081632653" />
+      <point x="316.1029761904765" y="749.3775510204082" />
+      <point x="335.50065192743796" y="749.3775510204081" />
+      <point x="26.200000000000045" y="15.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description2" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens">
+      <point x="63.66666666666663" y="-48.0" />
+      <point x="260.95333333333343" y="533.0" />
+      <point x="396.1560374149662" y="535.0693877551021" />
+      <point x="392.01726190476234" y="676.6020408163265" />
+      <point x="395.18024376417264" y="719.0244897959184" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens.Description4" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialScreens">
+      <point x="63.66666666666663" y="-48.0" />
+      <point x="260.95333333333343" y="825.0" />
+      <point x="394.3580782312929" y="826.034693877551" />
+      <point x="433.6764455782316" y="824.2224489795918" />
+      <point x="439.30269274376434" y="828.3612244897959" />
+      <point x="52.39999999999998" y="15.0" />
+    </edge>
+    <edge source="net.ichigotake.playground.screenstructure.app.tutorial.TutorialActivity" target="net.ichigotake.playground.screenstructure.app.tutorial.TutorialIndicatorView">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9664694280078897" x="497.00000000000006" y="473.0000000000001" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

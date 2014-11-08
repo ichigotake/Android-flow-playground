@@ -12,6 +12,13 @@ import android.view.ViewGroup;
 
 import flow.Flow;
 
+/**
+ * 画面遷移を実行する。
+ * ViewGroup内のビューを差し替えたり、遷移アニメーションをしたり。
+ *
+ * 公式のサンプルからコピペ
+ * https://github.com/square/flow/blob/master/flow-sample/src/main/java/com/example/flow/screenswitcher/SimpleSwitcher.java
+ */
 public class SimpleSwitcher extends ScreenSwitcher {
 	public static final class Factory extends ScreenSwitcher.Factory {
 		public Factory(int tagKey, ScreenContextFactory contextFactory) {
