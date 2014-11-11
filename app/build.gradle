@@ -23,3 +23,11 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.0'
     compile 'com.squareup.flow:flow:0.8'
 }
+
+// EXPERIMENTAL: https://gist.github.com/ichigotake/6f6c21c26971c4248d6d
+task archonDebug(type: Exec) {
+    executable "bash"
+    args "--login", "-c", "chromeos-apk '${buildDir}/outputs/apk/app-debug.apk' " \
+            + "&& /Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --load-and-launch-app=${projectDir}/${android.defaultConfig.applicationId}.android/"
+}
+archonDebug.dependsOn assembleDebug
